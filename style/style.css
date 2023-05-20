@@ -1,0 +1,46 @@
+.header{
+  background-color: #673DE6;
+  padding-bottom: 50px;
+}
+
+.nav-text{
+  color: white;
+}
+
+.cover{
+  padding-bottom: 150px;
+  background-color: #673DE6;
+}
+
+.pricing-header {
+  max-width: 1000px;
+}
+
+#table_notes{
+  font-size: 15px;
+}
+
+#infrastucture_note{
+  margin: 30px;
+}
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+  font-size: 30px;
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 2rem;
+  }
+}
+
+.row{
+  padding-bottom: 100px;
+}
+
+.lead{
+  padding-top: 20px;
+  font-size: 15px;
+}
+
