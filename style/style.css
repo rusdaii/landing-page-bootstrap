@@ -35,7 +35,7 @@
   }
 }
 
-.row{
+#row-features{
   padding-bottom: 100px;
 }
 
@@ -44,3 +44,10 @@
   font-size: 15px;
 }
 
+#row-info{
+  padding-bottom: 50px;
+}
+
+.bottom{
+  padding-top: 50px;
+}
