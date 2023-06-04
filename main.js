@@ -1,4 +1,5 @@
 // toggle scroll navbar
+
 const myNav = document.getElementById('header');
 const headerHeight = myNav.offsetHeight; // mengambil tinggi elemen header
 let section = document.querySelectorAll('section');
