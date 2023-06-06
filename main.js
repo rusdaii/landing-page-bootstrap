@@ -2,13 +2,14 @@
 
 const myNav = document.getElementById('header');
 const headerHeight = myNav.offsetHeight; // mengambil tinggi elemen header
-let section = document.querySelectorAll('section');
-let lists = document.querySelectorAll('.list');
-window.onscroll = handleScroll;
+const sections = document.querySelectorAll('section');
+const links = document.querySelectorAll('.nav-link');
 
-function activeLink(li) {
-    lists.forEach((item) => item.classList.remove('active'));
-    li.classList.add('active');
+window.addEventListener('scroll', handleScroll);
+
+function setActiveLink(link) {
+    links.forEach((link) => link.classList.remove('active'));
+    link.classList.add('active');
 }
 
 function handleScroll() {
@@ -19,15 +20,18 @@ function handleScroll() {
     }
     const scrollPosition = window.scrollY + headerHeight; // menghitung posisi scroll dengan memperhitungkan offset header
 
-    section.forEach(sec => {
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    sections.forEach((section) => {
+        const offset = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
 
         if (scrollPosition >= offset && scrollPosition < offset + height) {
-            const target = document.querySelector(`[href='#${id}']`).parentElement;
-            activeLink(target);
+            const targetLink = document.querySelector(`[href='#${id}']`);
+            if (targetLink) {
+                setActiveLink(targetLink);
+            }
         }
     });
 }
+
 

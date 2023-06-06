@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -12,52 +18,106 @@
 </head>
 
 <body>
-  <!--Navbar-->
-  <div id="header" class="header d-flex fixed-top header-transparent">
-    <div class="container d-flex align-items-center justify-content-end justify-content-md-between">
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <h1 class="text-light">VPS</h1>
-        </a>
-      </div>
-      <ul id="navbar" class="nav nav-underline col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li class="list active"><a class="nav-link" href="#hero">Home</a></li>
-        <li class="list"><a class="nav-link" href="#pricing">Pricing</a></li>
-        <li class="list"><a class="nav-link" href="#features">Features</a></li>
-        <li class="list"><a class="nav-link" href="#faq">FAQs</a></li>
-        <li class="list"><a class="nav-link" href="#">About</a></li>
-      </ul>
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2 text-light" id="btn-login">Login</button>
-        <button type="button" class="btn btn-primary" id="btn-signup">Sign-up</button>
+  <!--Header-->
+  <nav id="header" class="navbar navbar-expand-lg fixed-top ">
+    <div class="container justify-content-between">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Company</a>
+      <div class="collapse menu navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+        <ul class="navbar-nav  mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQs</a>
+          </li>
+        </ul>
+        <div class="register">
+          <button type="button" class="btn" id="btn-login">Login</button>
+        </div>
       </div>
     </div>
-  </div>
-  <!--Navbar End-->
+  </nav>
+  <!--Header End-->
 
-  <!--Header-->
-  <section id="hero">
-    <div class="cover">
-      <div class="container col-xxl-8 px-4">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 text-light">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img src="style/assets/Asset 1@4x.png" class="d-block mx-lg-auto img-fluid" alt="cover" width="1000"
-              height="1000" loading="lazy">
+  <!--Hero Section-->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>Lebih Bebas dengan VPS Murah</h1>
+          <p class="lead">Bebas lakukan apa saja pakai VPS terbaik di Indonesia. Lebih <br>
+            fleksibel, lebih cepat, dan lebih punya power.
+          </p>
+          <div>
+            <a href="#pricing">
+              <button id="btn-hero" class="btn" type="button">Pilih Sekarang</button>
+            </a>
           </div>
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-semibold lh-1 mb-3">Lebih Bebas dengan <br> VPS Murah</h1>
-            <p class="lead">Bebas lakukan apa saja pakai VPS terbaik di Indonesia. Lebih <br>
-              fleksibel, lebih cepat, dan lebih punya power.
-            </p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start pt-5">
-              <button type="button" class="btn btn-lg px-4" id="btn-cover">Pilih Sekarang</button>
+        </div>
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img">
+          <img src="style/assets/Asset 1@4x.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+  </section>
+  <!--Hero Section End-->
+
+  <!-- Stack Section -->
+  <section class="stack">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-12 col-lg-4">
+          <h3>Telah dioptimasi untuk berbagai CMS dan framework</h3>
+        </div>
+        <div class="col-12 col-lg-8 text-center align-items-center justify-content-center">
+          <div class="d-inline">
+            <div class="row ayam">
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/wordpress-1666255391.webp" class="" alt="">
+              </div>
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/joomla-1666254560.webp" class="" alt="">
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/laravel-1666254587.webp" class="" alt="">
+              </div>
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/nodejs-1666254635.webp" class="" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="d-inline">
+            <div class="row ayam">
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/python-1666254922.webp" class="" alt="">
+              </div>
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/moodle-1666254611.webp" class="" alt="">
+              </div>
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/codeigniter-1666254319.webp" class="" alt="">
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                <img src="style/assets/img/stacks/php-1666254653.webp" class="" alt="">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!--Header End-->
+  <!-- Stack Section End -->
 
   <!--Price-->
   <section id="pricing">
@@ -83,7 +143,7 @@
                 <small class="text-body-secondary fw-light fs-6">/bln</small>
               </h1>
               <div class="text-center">
-                <button type="button" class="btn btn-lg btn-primary mt-2 fs-6">Tambah ke Cart</button>
+                <button id="btn-buy" class="btn btn-lg" type="button">Tambah ke Cart</button>
               </div>
             </div>
           </div>
@@ -107,7 +167,7 @@
                 <small class="text-body-secondary fw-light fs-6">/bln</small>
               </h1>
               <div class="text-center">
-                <button type="button" class="btn btn-lg btn-primary mt-2 fs-6">Tambah ke Cart</button>
+                <button id="btn-buy" class="btn btn-lg" type="button">Tambah ke Cart</button>
               </div>
             </div>
           </div>
@@ -131,7 +191,7 @@
                 <small class="text-body-secondary fw-light fs-6">/bln</small>
               </h1>
               <div class="text-center">
-                <button type="button" class="btn btn-lg btn-primary mt-2 fs-6">Tambah ke Cart</button>
+                <button id="btn-buy" class="btn btn-lg" type="button">Tambah ke Cart</button>
               </div>
             </div>
           </div>
@@ -155,7 +215,7 @@
                 <small class="text-body-secondary fw-light fs-6">/bln</small>
               </h1>
               <div class="text-center">
-                <button type="button" class="btn btn-lg btn-primary mt-2 fs-6">Tambah ke Cart</button>
+                <button id="btn-buy" class="btn btn-lg" type="button">Tambah ke Cart</button>
               </div>
             </div>
           </div>
@@ -179,7 +239,7 @@
                 <small class="text-body-secondary fw-light fs-6">/bln</small>
               </h1>
               <div class="text-center">
-                <button type="button" class="btn btn-lg btn-primary mt-2 fs-6">Tambah ke Cart</button>
+                <button id="btn-buy" class="btn btn-lg" type="button">Tambah ke Cart</button>
               </div>
             </div>
           </div>
@@ -203,7 +263,7 @@
                 <small class="text-body-secondary fw-light fs-6">/bln</small>
               </h1>
               <div class="text-center">
-                <button type="button" class="btn btn-lg btn-primary mt-2 fs-6">Tambah ke Cart</button>
+                <button id="btn-buy" class="btn btn-lg" type="button">Tambah ke Cart</button>
               </div>
             </div>
           </div>
@@ -334,12 +394,12 @@
           </tr>
           <tr>
             <th scope="row" class="text-start"></th>
-            <td><button type="button" class="w-100 btn btn-lg btn-primary">Pilih</button></td>
-            <td><button type="button" class="w-100 btn btn-lg btn-primary">Pilih</button></td>
-            <td><button type="button" class="w-100 btn btn-lg btn-primary">Pilih</button></td>
-            <td><button type="button" class="w-100 btn btn-lg btn-primary">Pilih</button></td>
-            <td><button type="button" class="w-100 btn btn-lg btn-primary">Pilih</button></td>
-            <td><button type="button" class="w-100 btn btn-lg btn-primary">Pilih</button></td>
+            <td><button id="btn-pick" class="btn btn-lg" type="button">Pilih</button></td>
+            <td><button id="btn-pick" class="btn btn-lg" type="button">Pilih</button></td>
+            <td><button id="btn-pick" class="btn btn-lg" type="button">Pilih</button></td>
+            <td><button id="btn-pick" class="btn btn-lg" type="button">Pilih</button></td>
+            <td><button id="btn-pick" class="btn btn-lg" type="button">Pilih</button></td>
+            <td><button id="btn-pick" class="btn btn-lg" type="button">Pilih</button></td>
           </tr>
         </tbody>
       </table>
@@ -454,7 +514,8 @@
               <h2 class="featurette-heading fw-normal lh-1">Sistem Operasi Ubuntu</h2>
               <p class="lead">Ubuntu adalah salah satu OS yang disarankan untuk layanan VPS. Sifatnya open source dan
                 ideal bagi pengguna yang menginginkan hosting yang fleksibel dan stabil. OS ini juga cocok untuk semua
-                website dan proyek online lainnya yang membutuhkan sistem dengan kecepatan tinggi, super aman, dan stack
+                website dan proyek online lainnya yang membutuhkan sistem dengan kecepatan tinggi, super aman, dan
+                stack
                 yang bebas dikustomisasikan.</p>
               <h2 class="featurette-heading fw-normal lh-1">Versi Server Ubuntu</h2>
               <ul>
@@ -514,7 +575,8 @@
       <div class="col">
         <img class="pb-4" src="https://via.placeholder.com/100" alt="">
         <h3>Kontrol Penuh</h3>
-        <p class="text-start">Sewa VPS dan nikmati fleksibilitas dalam mengontrol sistem operasi yang digunakan. Dengan
+        <p class="text-start">Sewa VPS dan nikmati fleksibilitas dalam mengontrol sistem operasi yang digunakan.
+          Dengan
           full root access,
           Anda bebas melakukan konfigurasi lingkungan server dan menentukan jumlah resource untuk satu website besar
           atau beberapa website sederhana.</p>
@@ -524,7 +586,8 @@
         <h3>Performa Meroket</h3>
         <p class="text-start">Seluruh resource di VPS murah hanya untuk Anda, termasuk CPU, RAM, dan disk space.
           Performa website Anda juga
-          tidak akan terpengaruh oleh trafik website lain. Di samping itu, layanan VPS lebih powerful, stabil, dan ideal
+          tidak akan terpengaruh oleh trafik website lain. Di samping itu, layanan VPS lebih powerful, stabil, dan
+          ideal
           untuk berbagai situs dan aplikasi online.</p>
       </div>
       <div class="col">
@@ -532,7 +595,8 @@
         <h3>Mudah Diupgrade</h3>
         <p class="text-start">Jika butuh lebih banyak resource, Anda hanya perlu upgrade server VPS. Besarannya beda
           untuk tiap paket. Anda
-          tidak perlu transfer file, apalagi khawatir soal downtime. Cukup login control panel, pilih paket VPS terbaik
+          tidak perlu transfer file, apalagi khawatir soal downtime. Cukup login control panel, pilih paket VPS
+          terbaik
           yang Anda inginkan, lalu upgrade.</p>
       </div>
     </div>
@@ -565,6 +629,34 @@
   </div>
   <!--Info Feature-->
 
+  <!-- Clients Section -->
+  <section id="clients" class="clients section-bg">
+    <div class="container">
+      <h2>Dipercaya 100.000++ Pelanggan di Seluruh Indonesia</h2>
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="style/assets/img/clients/client-1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="style/assets/img/clients/client-2.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="style/assets/img/clients/client-3.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="style/assets/img/clients/client-4.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="style/assets/img/clients/client-5.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <img src="style/assets/img/clients/client-6.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Clinets Section End -->
+
   <!--FAQ-->
   <section id="faq">
     <div class="container text-center">
@@ -583,8 +675,10 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                VPS hosting adalah virtual private server yang menyediakan partisi di server fisik dan resource terpisah
-                bagi masing-masing pengguna. Anda bebas mengontrol, mengkustomisasi, dan mengkonfigurasi server virtual.
+                VPS hosting adalah virtual private server yang menyediakan partisi di server fisik dan resource
+                terpisah
+                bagi masing-masing pengguna. Anda bebas mengontrol, mengkustomisasi, dan mengkonfigurasi server
+                virtual.
                 Inilah mengapa VPS fleksibel dan lebih disukai pengguna yang menginginkan daya besar. <br> <br>
                 Layanan ini bersifat self-managed. Itu berarti Anda yang harus bertanggung jawab atas pengelolaan
                 server.
@@ -606,7 +700,8 @@
                 VPS Linux adalah server virtual yang dirancang khusus untuk bekerja dengan sistem operasi (OS) Linux,
                 termasuk distribusinya seperti Ubuntu dan Fedora. <br> <br>
 
-                Linux menawarkan berbagai keunggulan. OS open source ini memungkinkan pengguna mengakses source code dan
+                Linux menawarkan berbagai keunggulan. OS open source ini memungkinkan pengguna mengakses source code
+                dan
                 meningkatkan sistem keamanan. Selain itu, Linux juga menyediakan daya proses (processing power) dan
                 kapasitas yang lebih besar untuk mempercepat loading website demi meningkatkan kepuasan pengunjung.
               </div>
@@ -621,7 +716,8 @@
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                VPS dirancang untuk proyek online yang membutuhkan lebih banyak daya dan kontrol, seperti website dengan
+                VPS dirancang untuk proyek online yang membutuhkan lebih banyak daya dan kontrol, seperti website
+                dengan
                 penggunaan resource yang tinggi (intensive resource), aplikasi berbasis web, server game online, dan
                 WordPress multisite. <br><br>
 
